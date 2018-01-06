@@ -4,6 +4,7 @@ import { AngularEchartsModule } from 'ngx-echarts';
 import { ThemeModule } from '../../@theme/theme.module';
 import { DashboardComponent } from './dashboard.component';
 import { StatusCardComponent } from './status-card/status-card.component';
+import { SimpleCardComponent } from './simple-card/simple-card.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { RoomsComponent } from './rooms/rooms.component';
 import { RoomSelectorComponent } from './rooms/room-selector/room-selector.component';
@@ -29,6 +30,7 @@ import { TrafficChartComponent } from './traffic/traffic-chart.component';
   declarations: [
     DashboardComponent,
     StatusCardComponent,
+    SimpleCardComponent,
     TemperatureDraggerComponent,
     ContactsComponent,
     RoomSelectorComponent,
