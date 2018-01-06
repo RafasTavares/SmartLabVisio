@@ -38,7 +38,7 @@ export class EchartsBarComponent implements AfterViewInit, OnDestroy {
         xAxis: [
           {
             type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            data: ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SAB'],
             axisTick: {
               alignWithLabel: true,
             },
@@ -76,10 +76,11 @@ export class EchartsBarComponent implements AfterViewInit, OnDestroy {
         ],
         series: [
           {
-            name: 'Score',
+            
             type: 'bar',
             barWidth: '60%',
-            data: [10, 52, 200, 334, 390, 330, 220],
+            data: [24, 18, 22, 23, 20, 16, 25],
+            name: 'Temperatura °C '
           },
         ],
       };

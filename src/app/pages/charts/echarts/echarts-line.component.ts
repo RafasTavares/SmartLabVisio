@@ -37,7 +37,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
         xAxis: [
           {
             type: 'category',
-            data: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
+            data: ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SAB'],
             axisTick: {
               alignWithLabel: true,
             },
@@ -81,20 +81,20 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
         },
         series: [
           {
-            name: 'Line 1',
+            name: 'Ar Condicionado',
             type: 'line',
-            data: [1, 3, 9, 27, 81, 247, 741, 2223, 6669],
+            data: [0.3, 13, 19, 17, 12, 27, 0.3],
           },
           {
-            name: 'Line 2',
+            name: 'Lâmpadas',
             type: 'line',
-            data: [1, 2, 4, 8, 16, 32, 64, 128, 256],
-          },
-          {
-            name: 'Line 3',
-            type: 'line',
-            data: [1 / 2, 1 / 4, 1 / 8, 1 / 16, 1 / 32, 1 / 64, 1 / 128, 1 / 256, 1 / 512],
-          },
+            data: [0.1, 2, 4, 3, 2, 4, 0.1],
+           },
+          // {
+          //   name: 'Geral',
+          //   type: 'line',
+          //   data: [1 / 2, 1 / 4, 1 / 8, 1 / 16, 1 / 32, 1 / 64, 1 / 128, 1 / 256, 1 / 512],
+          // },
         ],
       };
     });
