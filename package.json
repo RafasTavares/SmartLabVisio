@@ -4,10 +4,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akveo/ngx-admin.git"
+    "url": "git+https://github.com/rafasTavares/"
   },
   "bugs": {
-    "url": "https://github.com/akveo/ngx-admin/issues"
+    "url": "https://github.com/rafasTavares/"
   },
   "scripts": {
     "ng": "ng",
@@ -32,7 +32,6 @@
     "@agm/core": "1.0.0-beta.0",
     "@angular/animations": "4.4.6",
     "@angular/common": "4.4.6",
-    "@angular/compiler": "4.4.6",
     "@angular/core": "4.4.6",
     "@angular/forms": "4.4.6",
     "@angular/http": "4.4.6",
@@ -74,7 +73,8 @@
   },
   "devDependencies": {
     "@angular/cli": "1.4.9",
-    "@angular/compiler-cli": "4.4.6",
+    "@angular/compiler": "^4.4.6",
+    "@angular/compiler-cli": "^4.4.6",
     "@angular/language-service": "4.4.6",
     "@compodoc/compodoc": "1.0.1",
     "@types/d3-color": "1.0.4",
@@ -96,10 +96,12 @@
     "npm-run-all": "4.0.2",
     "protractor": "5.1.2",
     "rimraf": "2.6.1",
+    "rollup": "^0.53.3",
     "stylelint": "7.13.0",
     "ts-node": "3.2.2",
     "tslint": "5.7.0",
     "tslint-language-service": "0.9.6",
-    "typescript": "2.3.4"
+    "typescript": "^2.3.4",
+    "uglify-js": "^3.3.4"
   }
 }
