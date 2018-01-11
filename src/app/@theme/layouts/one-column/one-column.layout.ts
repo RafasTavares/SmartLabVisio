@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
 
       <nb-sidebar class="menu-sidebar" tag="menu-sidebar" responsive>
         <nb-sidebar-header>
-          <a href="https://github.com/RafasTavares/ngx-admin" class="btn btn-hero-success main-btn">
+          <a href="https://github.com/RafasTavares/SmartLabVisio" class="btn btn-hero-success main-btn">
             <i class="ion ion-social-github"></i> <span>111Repositório</span>
           </a>
         </nb-sidebar-header>

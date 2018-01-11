@@ -29,7 +29,7 @@ import 'rxjs/add/operator/delay';
                    responsive
                    [right]="sidebar.id === 'right'">
         <nb-sidebar-header>
-        <a href="https://github.com/RafasTavares/ngx-admin" class="btn btn-hero-success main-btn">
+        <a href="https://github.com/RafasTavares/SmartLabVisio" class="btn btn-hero-success main-btn">
         <i class="ion ion-social-github"></i> <span>Repositório</span>
           </a>
         </nb-sidebar-header>
