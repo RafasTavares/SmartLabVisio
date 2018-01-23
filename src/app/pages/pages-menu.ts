@@ -94,7 +94,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Relatórios',
     icon: 'nb-bar-chart',
-    link: '/pages/charts/echarts'
+    link: '/pages/charts/echarts'},
+    {
+      title: 'Visualização (Animação)',
+      icon: 'nb-bar-chart',
+      link: '/pages/graph/index.html'}
     // children: [
     //   {
     //     title: 'Echarts',
