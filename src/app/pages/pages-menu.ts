@@ -97,7 +97,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/charts/echarts'},
     {
       title: 'Visualização (Animação)',
-      icon: 'nb-bar-chart',
+      icon: 'nb-title',
       link: '/pages/graph/index.html'}
     // children: [
     //   {
@@ -159,5 +159,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //       link: '/auth/reset-password',
   //     },
   //   ],
-   },
+   ,
 ];
