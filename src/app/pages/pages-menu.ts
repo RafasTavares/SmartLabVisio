@@ -98,7 +98,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     {
       title: 'Visualização (Animação)',
       icon: 'nb-title',
-      link: '/pages/graph/index.html'}
+      link: '/pages/tables/smart-table'}
     // children: [
     //   {
     //     title: 'Echarts',
