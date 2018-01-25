@@ -95,7 +95,7 @@
 
     .month {
       display: inline-block;
-      width: 2.75rem;
+      // width: 4.75rem;
       font-family: nb-theme(font-secondary);
       font-size: 1.25rem;
       font-weight: nb-theme(font-weight-bolder);
@@ -122,6 +122,7 @@
       }
 
       &.down {
+        
         color: text-success();
 
         &::before {

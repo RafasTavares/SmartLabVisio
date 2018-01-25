@@ -1,8 +1,8 @@
 <nb-card size="large">
   <div class="consumption-table">
     <div class="table-header">
-      <div>Eletricidade</div>
-      <div class="subtitle">Comsumo</div>
+      <div>Temperatura</div>
+      <div class="subtitle">Preferências do usuario</div>
     </div>
 
     <nb-tabset fullWidth>
@@ -13,7 +13,7 @@
             <span class="delta" [ngClass]="{ 'down': month.down }">{{ month.delta }}</span>
           </div>
           <div class="results">
-            <b>{{ month.kWatts }}</b> kWh / R$: <b>{{ month.cost }}</b>
+            <b>{{ month.kWatts }}</b><!--  °C <b>{{ month.cost }}</b> -->
           </div>
         </div>
       </nb-tab>
@@ -24,21 +24,21 @@
     <div class="chart-header">
       <div class="header-stats">
         <div class="stats-block">
-          <div class="subtitle">Comsumido</div>
+          <div class="subtitle">Variação de temperatura</div>
           <div>
-            <span class="value">816</span>
-            <span class="unit">kWh</span>
+            <span class="value">14</span>
+            <span class="unit">°C</span>
           </div>
         </div>
 
-        <div class="stats-block">
+        <!-- <div class="stats-block">
           <div class="subtitle">Gasto</div>
           <div>
               <span class="unit">R$: </span>
             <span class="value">291</span>
             
           </div>
-        </div>
+        </div> -->
       </div>
 
       <div class="dropdown" ngbDropdown>

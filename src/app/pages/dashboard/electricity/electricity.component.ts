@@ -12,8 +12,8 @@ export class ElectricityComponent implements OnDestroy {
 
   data: Array<any>;
 
-  type = 'week';
-  types = ['week', 'month', 'year'];
+  type = 'Ontem';
+  types = ['Ontem'];
 
   currentTheme: string;
   themeSubscription: any;
