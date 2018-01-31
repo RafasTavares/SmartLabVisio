@@ -83,18 +83,18 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
           {
             name: 'Ar Condicionado',
             type: 'line',
-            data: [0.3, 13, 19, 17, 12, 27, 0.3],
-          },
-          {
-            name: 'Lâmpadas',
-            type: 'line',
-            data: [0.1, 2, 4, 3, 2, 4, 0.1],
+            data: [60, 52, 47, 66, 70, 65, 63],
            },
-          // {
-          //   name: 'Geral',
-          //   type: 'line',
-          //   data: [1 / 2, 1 / 4, 1 / 8, 1 / 16, 1 / 32, 1 / 64, 1 / 128, 1 / 256, 1 / 512],
-          // },
+           {
+             name: 'Ambiente',
+             type: 'line',
+             data: [0.1, 2, 4, 3, 2, 4, 0.1],
+            },
+           {
+             name: 'Geral',
+             type: 'line',
+             data: [1 / 2, 1 / 4, 1 / 8, 1 / 16, 1 / 32, 1 / 64, 1 / 128, 1 / 256, 1 / 512],
+           },
         ],
       };
     });
