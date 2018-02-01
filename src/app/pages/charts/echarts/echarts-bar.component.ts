@@ -79,7 +79,7 @@ export class EchartsBarComponent implements AfterViewInit, OnDestroy {
             
             type: 'bar',
             barWidth: '60%',
-            data: [24, 18, 22, 23, 20, 16, 25],
+            data: [31, 18, 22, 23, 20, 16, 25],
             name: 'Temperatura °C '
           },
         ],

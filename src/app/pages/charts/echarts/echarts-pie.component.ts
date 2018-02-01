@@ -15,6 +15,14 @@ export class EchartsPieComponent implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
+    this.getLocalValues();
+  }
+
+  ngOnDestroy(): void {
+    this.themeSubscription.unsubscribe();
+  }
+
+  getLocalValues() {
     this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
 
       const colors = config.variables;
@@ -30,23 +38,26 @@ export class EchartsPieComponent implements AfterViewInit, OnDestroy {
         legend: {
           orient: 'vertical',
           left: 'left',
-          data: ['USA', 'Germany', 'France', 'Canada', 'Russia'],
+          data: ['17°C', '18°C', '19°C', '20°C', '21°C', '22°C', '23°C', '24°C',],
           textStyle: {
             color: echarts.textColor,
           },
         },
         series: [
           {
-            name: 'Countries',
+            name: 'Temperaturas',
             type: 'pie',
             radius: '80%',
             center: ['50%', '50%'],
             data: [
-              { value: 335, name: 'Germany' },
-              { value: 310, name: 'France' },
-              { value: 234, name: 'Canada' },
-              { value: 135, name: 'Russia' },
-              { value: 1548, name: 'USA' },
+              { value: 335, name: '17°C' },
+              { value: 310, name: '18°C' },
+              { value: 214, name: '19°C' },
+              { value: 135, name: '20°C' },
+              { value: 100, name: '21°C' },
+              { value: 90, name: '22°C' },
+              { value: 245, name: '23°C' },
+              { value: 97, name: '24°C' },
             ],
             itemStyle: {
               emphasis: {
@@ -73,9 +84,5 @@ export class EchartsPieComponent implements AfterViewInit, OnDestroy {
         ],
       };
     });
-  }
-
-  ngOnDestroy(): void {
-    this.themeSubscription.unsubscribe();
   }
 }

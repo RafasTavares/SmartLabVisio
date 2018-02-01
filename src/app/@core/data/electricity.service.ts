@@ -1,68 +1,59 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Injectable()
-export class ElectricityService {
+export class VotosService {
 
-  private data = [
-    {
-      title: '24/01/2018',
-      months: [
-        { month: 'User 1', delta: '3', down: true, kWatts: '20 °C' },
-        { month: 'User 2', delta: '5', down: true, kWatts: '19 °C'},
-        { month: 'User 3', delta: '7', down: true, kWatts: '17 °C' },
-        { month: 'User 4', delta: '6', down: true, kWatts: '18 °C'},
-        { month: 'User 5', delta: '1', down: false, kWatts: '25 °C' },
-        { month: 'User 6', delta: '0', down: false, kWatts: '24 °C' },
-        { month: 'User 7', delta: '2', down: false, kWatts: '26 °C' },
-        { month: 'User 8', delta: '1', down: true, kWatts: '25 °C' },
-        { month: 'User 9', delta: '5', down: true, kWatts: '19 °C' },
-        { month: 'User 10', delta: '5', down: true, kWatts: '19 °C' },
-        { month: 'User 11', delta: '3', down: true, kWatts: '21 °C' },
-        { month: 'User 12', delta: '0', down: false, kWatts: '22 °C' },
-      ],
-    },
-    // {
-    //   title: '2016',
-    //   active: true,
-    //   months: [
-    //     { month: 'Jan', delta: '1.56', down: true, kWatts: '789', cost: '91' },
-    //     { month: 'Feb', delta: '0.33', down: false, kWatts: '791', cost: '92' },
-    //     { month: 'Mar', delta: '0.62', down: true, kWatts: '790', cost: '92' },
-    //     { month: 'Apr', delta: '1.93', down: true, kWatts: '783', cost: '87' },
-    //     { month: 'May', delta: '2.52', down: true, kWatts: '771', cost: '83' },
-    //     { month: 'Jun', delta: '0.39', down: false, kWatts: '774', cost: '85' },
-    //     { month: 'Jul', delta: '1.61', down: true, kWatts: '767', cost: '81' },
-    //     { month: 'Aug', delta: '1.41', down: true, kWatts: '759', cost: '76' },
-    //     { month: 'Sept', delta: '1.03', down: true, kWatts: '752', cost: '74' },
-    //     { month: 'Oct', delta: '2.94', down: false, kWatts: '769', cost: '82' },
-    //     { month: 'Nov', delta: '0.26', down: true, kWatts: '767', cost: '81' },
-    //     { month: 'Dec', delta: '1.62', down: true, kWatts: '760', cost: '76' },
-    //   ],
-    // },
-    // {
-    //   title: '2017',
-    //   months: [
-    //     { month: 'Jan', delta: '1.34', down: false, kWatts: '789', cost: '91' },
-    //     { month: 'Feb', delta: '0.95', down: false, kWatts: '793', cost: '93' },
-    //     { month: 'Mar', delta: '0.25', down: true, kWatts: '791', cost: '92' },
-    //     { month: 'Apr', delta: '1.72', down: false, kWatts: '797', cost: '95' },
-    //     { month: 'May', delta: '2.62', down: true, kWatts: '786', cost: '90' },
-    //     { month: 'Jun', delta: '0.72', down: false, kWatts: '789', cost: '91' },
-    //     { month: 'Jul', delta: '0.78', down: true, kWatts: '784', cost: '89' },
-    //     { month: 'Aug', delta: '0.36', down: true, kWatts: '782', cost: '88' },
-    //     { month: 'Sept', delta: '0.55', down: false, kWatts: '787', cost: '90' },
-    //     { month: 'Oct', delta: '1.81', down: true, kWatts: '779', cost: '86' },
-    //     { month: 'Nov', delta: '1.12', down: true, kWatts: '774', cost: '84' },
-    //     { month: 'Dec', delta: '0.52', down: false, kWatts: '776', cost: '95' },
-    //   ],
-    // },
-  ];
+  http: Http;
+  data: any;
+
+  getPreferenciasdoUsuario() {
+
+    let retorno;
+    try {
+      this.http.get("localhost:8732/sensor/umi/").map(res => res.json()).subscribe(
+        values => {
+          retorno = values;
+          console.log(values);
+        });
+      this.data = retorno.value;
+    } catch (err) {
+      alert("localhost off - get default value");
+      console.log(err);
+
+      this.getDataDefault();
+    }
+  }
+
+  getDataDefault() {
+    return this.data = [
+      {
+        title: '24/01/2018',
+        months: [
+          { month: 'User 1', delta: '3', down: true, kWatts: '20 °C' },
+          { month: 'User 2', delta: '5', down: true, kWatts: '19 °C' },
+          { month: 'User 3', delta: '7', down: true, kWatts: '17 °C' },
+          { month: 'User 4', delta: '6', down: true, kWatts: '18 °C' },
+          { month: 'User 5', delta: '1', down: false, kWatts: '25 °C' },
+          { month: 'User 6', delta: '0', down: false, kWatts: '24 °C' },
+          { month: 'User 7', delta: '2', down: false, kWatts: '26 °C' },
+          { month: 'User 8', delta: '1', down: true, kWatts: '25 °C' },
+          { month: 'User 9', delta: '5', down: true, kWatts: '19 °C' },
+          { month: 'User 10', delta: '5', down: true, kWatts: '19 °C' },
+          { month: 'User 11', delta: '3', down: true, kWatts: '21 °C' },
+          { month: 'User 12', delta: '0', down: false, kWatts: '22 °C' },
+        ],
+      },
+    ];
+  }
+
 
   constructor() {
   }
 
   // TODO: observables
   getData() {
+    this.getPreferenciasdoUsuario();
     return this.data;
   }
 }
